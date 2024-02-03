@@ -1,9 +1,9 @@
 import s from './categories.module.scss'
 import { useState } from "react";
-import { CrownIcon } from "../icons/crown-icon";
+import { CrownIcon } from "../icons/crown-icon/crown-icon";
 
 export function Categories(){
-    const [isFocused, setIsFocused] = useState(false);
+const [isFocused, setIsFocused] = useState(false);
     
     const handleFocus = () => {
         setIsFocused(true);
