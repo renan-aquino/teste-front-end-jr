@@ -1,0 +1,72 @@
+.hero {
+    height: 395px;
+    width: 1440px;
+    margin-inline: auto;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1)), url('/images/hero_banner.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: $max-width;
+    height: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media (max-width: 768px) {
+        width: 100vw;
+        margin: 0;
+        padding-inline: 10px;
+        text-align: center;
+    }
+}
+
+.headline {
+    width: 50%;
+    color: $text-color-2;
+
+    h1 {
+        line-height: 72px;
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    h4 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 54px;
+        margin-bottom: 36px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+        h1 {
+            line-height: 60px;
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    
+        h4 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 54px;
+            margin-bottom: 36px;
+        }
+
+    }
+}
+
+
+.btn {
+   font-size: 18px; 
+   font-weight: 600;
+   padding: 16.5px 60px;
+   border-radius: 5px;
+   line-height: 27px;
+}
