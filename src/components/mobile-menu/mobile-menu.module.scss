@@ -1,0 +1,34 @@
+.mobile_menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    height: 100svh;
+    width: 280px;
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+.container {
+    margin-top: 72px;
+    padding-inline: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.icons {
+    width: 100%;
+    height: 120px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.category_item {
+    padding-block: 10px;    
+    font-weight: 600;
+    font-size: 12px;
+    display: block;
+}

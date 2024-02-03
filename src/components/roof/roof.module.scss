@@ -1,0 +1,30 @@
+.roof {
+    height: 32px;
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+
+    @media(max-width: 768px){
+        display: none;
+    }
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.list_item {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    font-size: 12px;
+
+    span {
+        color: $accent-color;
+        font-weight: 600;
+    }
+}

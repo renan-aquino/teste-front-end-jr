@@ -1,0 +1,38 @@
+.categories {
+    width: 100%;
+    border-top: 1px solid #F0F0F0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+}
+
+.categories_container {
+    display: flex;
+    height: 40px;
+    gap: 92px;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1170px) {
+        gap: 0;
+        justify-content: space-between;
+        padding-inline: 5px;
+    }
+}
+
+
+.category {
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &:focus {
+        color: $accent-color;
+    }
+
+}
