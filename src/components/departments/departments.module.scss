@@ -14,7 +14,8 @@
 .container {
     height: 100%;
     display: flex;
-    gap: clamp(40px, 5vw, 60px);
+    gap: 40px;
+    justify-content: space-between;
     overflow-x: auto;
     scroll-behavior: smooth;
 
