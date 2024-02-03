@@ -1,0 +1,58 @@
+.department_card {
+    text-align: center;
+
+    &:focus {
+        .box {
+            background-color: #FFFFFF;
+        }
+
+        .overlay{
+            display: block;
+        }
+
+        .name {
+            color: $accent-color;
+        }
+    }
+}
+
+.box {
+    width: 128px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F4F4;
+    margin-bottom: 28px;
+
+}
+
+.image_wrapper {
+    position: relative;
+    height: 61px;
+    width: 61px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: #F71963;
+    mix-blend-mode: lighten;
+}
+
+
+.name {
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: 500;
+}
