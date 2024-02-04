@@ -18,18 +18,18 @@
 }
 
 .name {
+    height: 66px;
     font-size: 15px;
     font-weight: 300;
-    line-height: 23px;
+    line-height: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .payment_info {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-bottom: 12px;
+    padding-block: 4px 12px;
 
 }
 
@@ -38,19 +38,22 @@
     font-weight: 400;
     text-decoration: line-through;
     line-height: 24px;
+    padding-bottom: 3px;
 }
 
 .price {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     color: #3F3F40;
     line-height: 30px;
+    padding-bottom: 4px;
 }
 
 .conditions {
     font-size: 12px;
     font-weight: 400;
     color: #3F3F40;
+    padding-bottom: 6px;
 }
 
 .shipping {
