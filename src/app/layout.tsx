@@ -4,7 +4,7 @@ import "./globals.scss";
 import { Header } from "@/components/header/header";
 import { DefaultProviders } from "@/components/default-providers";
 
-const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ["latin"] });
+const poppins = Poppins({ weight: ['300', '400', '500', '600', '700', '900'], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body className={poppins.className}>
         <DefaultProviders>
           <Header/>

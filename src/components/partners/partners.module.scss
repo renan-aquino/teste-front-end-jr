@@ -1,0 +1,17 @@
+.partners {
+    max-width: 1269px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 70px;
+    gap: 40px;
+    
+    @media (max-width: 1280px) {
+        padding-inline: 10px;   
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}

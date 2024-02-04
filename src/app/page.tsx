@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero/hero";
 import styles from "./page.module.css";
 import { Departments } from "@/components/departments/departments";
 import { ProductDisplay } from "@/components/product-display/product-display";
+import { Partners } from "@/components/partners/partners";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero/>
       <Departments/>
       <ProductDisplay/>
+      <Partners/>
     </main>
   );
 }
