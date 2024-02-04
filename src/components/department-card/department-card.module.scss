@@ -1,18 +1,29 @@
 .department_card {
     text-align: center;
+    cursor: pointer;
+}
 
-    &:focus {
-        .box {
-            background-color: #FFFFFF;
-        }
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: #F71963;
+    mix-blend-mode: lighten;
+}
 
-        .overlay{
-            display: block;
-        }
+.selected {
+    .overlay {
+        display: block;
+    }
 
-        .name {
-            color: $accent-color;
-        }
+    .name {
+        color: $accent-color;
+    }
+
+    .box {
+        background-color: #FFFFFF;
     }
 }
 
@@ -39,17 +50,6 @@
     height: 100%;
     width: 100%;
 }
-
-.overlay {
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    inset: 0;
-    background-color: #F71963;
-    mix-blend-mode: lighten;
-}
-
 
 .name {
     color: #4E4E4E;

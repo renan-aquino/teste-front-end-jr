@@ -12,6 +12,7 @@ import clothing from '@/../public/images/clothing.png'
 import arrow from '@/../public/vectors/tiny-right-arrow.svg'
 import Image from 'next/image'
 import { useSlider } from '@/hooks/useSlider'
+import { FilterDepartment } from '@/types/filter-department'
 
 
 export function Departments(){
@@ -30,13 +31,13 @@ export function Departments(){
             {canScrollRight && <button className={s.next_button} onClick={handleNextClick}><Image src={arrow} alt='right-arrow'></Image></button>}
 
             <div className={s.container} ref={containerRef}>
-                <DepartmentCard name="Tecnologia" src={devices} alt='tecnologia'/>
-                <DepartmentCard name="Supermercado" src={store} alt='supermercado'/>
-                <DepartmentCard name="Bebidas" src={beverage} alt='bebidas'/>
-                <DepartmentCard name="Ferramentas" src={tools} alt='ferramentas'/>
-                <DepartmentCard name="Saúde" src={health} alt='saúde'/>
-                <DepartmentCard name="Esporte e Fitness" src={running} alt='esporte e fitness'/>
-                <DepartmentCard name="Moda" src={clothing} alt='moda'/>
+                <DepartmentCard filter={FilterDepartment.TECNOLOGIA} name="Tecnologia" src={devices} alt='tecnologia'/>
+                <DepartmentCard filter={FilterDepartment.SUPERMERCADO} name="Supermercado" src={store} alt='supermercado'/>
+                <DepartmentCard filter={FilterDepartment.BEBIDAS} name="Bebidas" src={beverage} alt='bebidas'/>
+                <DepartmentCard filter={FilterDepartment.FERRAMENTAS} name="Ferramentas" src={tools} alt='ferramentas'/>
+                <DepartmentCard filter={FilterDepartment.SAUDE} name="Saúde" src={health} alt='saúde'/>
+                <DepartmentCard filter={FilterDepartment.FITNESS} name="Esporte e Fitness" src={running} alt='esporte e fitness'/>
+                <DepartmentCard filter={FilterDepartment.MODA} name="Moda" src={clothing} alt='moda'/>
             </div>
         </section>
     )
