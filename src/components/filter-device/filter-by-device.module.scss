@@ -1,0 +1,26 @@
+.device_filter {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.device {
+    width: 211.5px;
+    padding-block: 6.5px;
+    border: 1px solid #BDBDBD;
+    color: #3B3B3B;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 176px;    
+    }
+}
+
+.selected {
+    color: $accent-color;
+}

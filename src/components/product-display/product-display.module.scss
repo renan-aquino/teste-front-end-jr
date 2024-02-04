@@ -1,0 +1,53 @@
+.product_display {
+    margin-inline: auto;
+    
+}
+
+.title_wrapper {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.line {
+    width: 360px;
+    height: 1px;
+    background-color: #DEDEDE;
+
+    @media (max-width:1280px) {
+        width: min(22vw, 360px);
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.device_filter {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.device {
+    width: 211.5px;
+    padding-block: 6.5px;
+    border: 1px solid #BDBDBD;
+    color: #3B3B3B;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media (max-width: 768px) {
+        width: 176px;    
+    }
+}
