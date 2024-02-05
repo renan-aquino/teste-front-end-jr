@@ -11,7 +11,7 @@ export function SectionTitle({text, lines} : SectionTitleProps) {
     
     return(
         <div className={s.title_wrapper}>
-            <div className={s.line} style={{display: display}} /><h3>Produtos relacionados</h3><div className={s.line} style={{display: display}}/>
+            <div className={s.line} style={{display: display}} /><h3>{text}</h3><div className={s.line} style={{display: display}}/>
         </div>
     )
 }
