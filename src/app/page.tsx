@@ -4,6 +4,7 @@ import { Departments } from "@/components/departments/departments";
 import { ProductDisplay } from "@/components/product-display/product-display";
 import { Partners } from "@/components/partners/partners";
 import { RelatedProducts } from "@/components/related-products/related-products";
+import { Brands } from "@/components/brands/brands";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ProductDisplay/>
       <Partners/>
       <RelatedProducts/>
+      <Brands/>
     </main>
   );
 }

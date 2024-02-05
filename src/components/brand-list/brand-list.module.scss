@@ -1,0 +1,13 @@
+.flex_container {
+    display: flex;    
+}
+
+.box_shadow_wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 16px;
+
+    @media (max-width: 768px) {
+        gap: 32px;
+    }
+}
