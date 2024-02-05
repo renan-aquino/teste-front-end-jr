@@ -15,10 +15,7 @@
     margin-inline: auto;
     overflow-x: scroll;
     scroll-behavior: smooth;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    scrollbar-width: none;
 }
 
 

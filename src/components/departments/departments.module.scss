@@ -18,10 +18,7 @@
     justify-content: space-between;
     overflow-x: auto;
     scroll-behavior: smooth;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    scrollbar-width: none;
 
     @media (max-width: 768px) {
         gap: 40px
