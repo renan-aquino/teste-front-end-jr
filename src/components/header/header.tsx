@@ -17,9 +17,9 @@ import { MobileMenu } from '../mobile-menu/mobile-menu'
 
 export function Header() {
   
-    const [ menu, setMenu ] = useState(false);
     const menuBoxRef = useRef<HTMLDivElement | null>(null);
     const menuRef = useRef<HTMLDivElement | null>(null);
+    const [ menu, setMenu ] = useState(false);
 
     useEffect(() => {
         const closeMenuBox = (event : MouseEvent) => {
@@ -27,13 +27,19 @@ export function Header() {
             setMenu(false);
           }
         };
+
+        const html = document.querySelector("html");
+        if (html) {
+            html.style.overflow = menu ? "hidden" : "auto";
+        }
       
         document.addEventListener('click', closeMenuBox);
       
         return () => {
             document.removeEventListener('click', closeMenuBox);
         };
-       }, [menuBoxRef, menuRef]);
+     
+    }, [menuBoxRef, menuRef, menu]);
     
     return (
         <header className={s.header_tag}>
@@ -50,18 +56,10 @@ export function Header() {
                     </div>
 
                     <div className={s.user_buttons}>
-                        <a href="#">
-                            <ReturnsIcon/>
-                        </a>
-                        <a href="#">
-                            <HeartIcon/>
-                        </a>
-                        <a href="#">
-                            <UserCircleIcon/>
-                        </a>
-                        <a href="#">
-                            <CartIcon/>
-                        </a>
+                        <a href="#"><ReturnsIcon/></a>
+                        <a href="#"><HeartIcon/></a>
+                        <a href="#"><UserCircleIcon/></a>
+                        <a href="#"><CartIcon/></a>
                     </div>
 
                     <div className={s.menu}>
