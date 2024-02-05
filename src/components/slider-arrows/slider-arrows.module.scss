@@ -3,8 +3,12 @@
     width: 56px;
     aspect-ratio: 1 / 1;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     background-color: transparent;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .left_arrow {
@@ -27,6 +31,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .blue_left_arrow {
