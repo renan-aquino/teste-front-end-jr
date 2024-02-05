@@ -13,7 +13,7 @@ export function ProductDisplay(){
             <FilterByDevice/>
 
             <div className={s.container}>
-                <Slider paddingSize={16} customArrow={false}>
+                <Slider paddingSize={16}>
                     <ProductList/>
                 </Slider>
             </div>

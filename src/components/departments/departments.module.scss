@@ -1,53 +1,22 @@
 .departments {
-    max-width: $max-width;
+    max-width: calc($max-width + 16px);
     margin-inline: auto;
-    margin-block: 35px;;
-    height: 174px;
+    margin-block: 26px 40px;
     position: relative;
-    
-    @media (max-width: $max-width) {
-        padding-inline: 15px;
-    }
-
 }
 
 .container {
-    height: 100%;
+    width: 100%;
     display: flex;
     gap: 40px;
     justify-content: space-between;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+    padding-inline: 8px;
 
-    @media (max-width: 768px) {
-        gap: 40px
+    @media (max-width: 1280px) {
+        padding-inline: 16px;
     }
-}
 
-
-.previous_button,
-.next_button {
-    background-color: #FFFFFF;
-    width: 56px;
-    aspect-ratio: 1 / 1;
-    border-radius: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-}
-
-.previous_button {
-    bottom: 50%;
-    transform: translateY(50%) rotate(180deg);
-    left: 0;
-}
-
-.next_button {
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
+    @media (max-width: 1170px) {
+        width: auto;
+    }
 }
