@@ -1,0 +1,42 @@
+.left_arrow,
+.right_arrow {
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.left_arrow {
+    bottom: 50%;
+    transform: translateY(50%) rotate(180deg);
+    left: -40px;
+}
+
+.right_arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
+}
+
+
+.blue_arrow {
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue_left_arrow {
+    bottom: 50%;
+    transform: translateY(50%) rotate(180deg);
+    left: 0;
+}
+
+.blue_right_arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}

@@ -22,7 +22,7 @@ export function ProductCard(props : ProductProps){
 
             <div className={s.container}>
                 <div className={s.image_box}>
-                    <Image src={props.photo} alt={props.name} width={246} height={228}></Image>
+                    <Image className={s.image} src={props.photo} alt={props.name} width={246} height={228}></Image>
                 </div>
                 <p className={s.name}>{props.name}</p>
                 <div className={s.payment_info}>

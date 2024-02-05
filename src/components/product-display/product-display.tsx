@@ -1,5 +1,5 @@
 import s from './product-display.module.scss'
-import { ProductSlider } from '../product-slider/product-slider';
+import { Slider } from '../slider/slider';
 import { ProductList } from '../product-list/product-list';
 import { FilterByDevice } from '../filter-device/filter-by-device';
 import { SectionTitle } from '../section-title/section-title';
@@ -12,10 +12,10 @@ export function ProductDisplay(){
             <SectionTitle text='Produtos relacionados' lines={true}/>
             <FilterByDevice/>
 
-            <div className={s.product_container}>
-                <ProductSlider>
-                  <ProductList/>
-                </ProductSlider>
+            <div className={s.container}>
+                <Slider paddingSize={16} customArrow={false}>
+                    <ProductList/>
+                </Slider>
             </div>
 
         </section>

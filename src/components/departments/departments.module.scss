@@ -38,11 +38,6 @@
     align-items: center;
     position: absolute;
     z-index: 2;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
-
 }
 
 .previous_button {

@@ -22,7 +22,7 @@ export function Departments(){
         canScrollRight,
         handlePreviousClick,
         handleNextClick,
-    } = useSlider();
+    } = useSlider(0);
 
     return (
         <section className={s.departments}>

@@ -1,19 +1,20 @@
 import { useRef, useState, useEffect } from 'react';
 
-export function useSlider() {
+export function useSlider(paddingSize: number) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
+    
 
     const handlePreviousClick = () => {
         if (containerRef.current) {
-            containerRef.current.scrollLeft -= containerRef.current.offsetWidth;
+            containerRef.current.scrollLeft -= containerRef.current.offsetWidth + (paddingSize * 2);
         }
     };
 
     const handleNextClick = () => {
         if (containerRef.current) {
-            containerRef.current.scrollLeft += containerRef.current.offsetWidth;
+            containerRef.current.scrollLeft += containerRef.current.offsetWidth + (paddingSize * 2);
         }
     };
 

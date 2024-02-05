@@ -14,8 +14,8 @@ export async function ProductList(){
     const products : Product[] = data?.products
     
     return (
-        <div className={s.product_list}>
-           {products?.map((product, index) => <ProductCard photo={product.photo} name={product.productName} price={product.price} key={index} description={product.descriptionShort}/>)}
+        <div className={s.box_shadow_wrapper}>
+            {products?.map((product, index) => <ProductCard photo={product.photo} name={product.productName} price={product.price} key={index} description={product.descriptionShort}/>)}
         </div>
     )
 } 

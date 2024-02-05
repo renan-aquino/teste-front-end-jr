@@ -1,8 +1,13 @@
-.product_list {
+.box_shadow_wrapper {
     display: flex;
     gap: 62px;
+    padding: 16px;
+
+    @media (max-width: 1024px) {
+        gap: 42px;
+    }
 
     @media (max-width: 768px) {
-        gap: 40px;
+        gap: 18px;
     }
 }
