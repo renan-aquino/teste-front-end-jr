@@ -7,10 +7,9 @@ import { Arrows, BlueArrows } from '../slider-arrows/slider-arrows';
 interface SliderProps {
     children: React.ReactNode,
     paddingSize: number,
-    customArrow: boolean
   }
 
-export function Slider({children, paddingSize, customArrow} : SliderProps){
+export function Slider({children, paddingSize} : SliderProps){
     const {
         containerRef,
         canScrollLeft,
@@ -37,7 +36,7 @@ export function Slider({children, paddingSize, customArrow} : SliderProps){
 } 
 
 
-export function SliderBlueArrows({children, paddingSize, customArrow} : SliderProps){
+export function SliderBlue({children, paddingSize} : SliderProps){
     const {
         containerRef,
         canScrollLeft,
