@@ -27,7 +27,7 @@ export function Footer() {
                 <div className={s.nav}>
 
                     <div className={s.nav_item}>
-                        <h5 className={s.list_title}>Sobre nós</h5>    
+                        <h5 className={s.list_title}>SOBRE NÓS</h5>    
                         <ul className={s.link_list}>
                             <li><Link href="">CONHEÇA</Link></li>
                             <li><Link href="">COMO COMPRAR</Link></li>
@@ -55,16 +55,16 @@ export function Footer() {
                     <div className={s.nav_item}>
                         <h5 className={s.list_title}>FORMAS DE PAGAMENTO</h5>
                         <ul className={s.payment_grid}>
-                            <li><Link href=""><Image src={visa} alt='visa'/></Link></li>
-                            <li><Link href=""><Image src={elo} alt='elo'/></Link></li>
-                            <li><Link href=""><Image src={alelo} alt='alelo'/></Link></li>
-                            <li><Link href=""><Image src={diners} alt='diners'/></Link></li>
-                            <li><Link href=""><Image src={ifood} alt='ifood'/></Link></li>
-                            <li><Link href=""><Image src={mastercard} alt='mastercard'/></Link></li>
-                            <li><Link href=""><Image src={pix} alt='pix'/></Link></li>
-                            <li><Link href=""><Image src={amex} alt='amex'/></Link></li>
-                            <li><Link href=""><Image src={ticket} alt='ticket'/></Link></li>
-                            <li><Link href=""><Image src={sodexo} alt='sodexo'/></Link></li>
+                            <li><Image src={visa} alt='visa'/></li>
+                            <li><Image src={elo} alt='elo'/></li>
+                            <li><Image src={alelo} alt='alelo'/></li>
+                            <li><Image src={diners} alt='diners'/></li>
+                            <li><Image src={ifood} alt='ifood'/></li>
+                            <li><Image src={mastercard} alt='mastercard'/></li>
+                            <li><Image src={pix} alt='pix'/></li>
+                            <li><Image src={amex} alt='amex'/></li>
+                            <li><Image src={ticket} alt='ticket'/></li>
+                            <li><Image src={sodexo} alt='sodexo'/></li>
                         </ul>
                     </div>
 
