@@ -2,28 +2,19 @@
 
 import Image, { StaticImageData } from 'next/image'
 import s from './department-card.module.scss'
-import { FilterDepartment } from '@/types/filter-department';
-import { useContext } from 'react';
-import { FilterContext } from '@/contexts/filter-context';
+import Link from 'next/link';
 
 interface CardProps {
     src: StaticImageData;
     alt: string;
     name: string;
-    filter: FilterDepartment
 }
 
 
-export function DepartmentCard({ src, alt, name, filter } : CardProps){
+export function DepartmentCard({ src, alt, name } : CardProps){
 
-    const { department, setDepartment } = useContext(FilterContext)
-
-    const handleChangeType = (value: FilterDepartment) => {
-        setDepartment(value);
-    };
-    
     return (
-        <div className={`${s.department_card} ${department === filter ? s.selected : ''}`} onClick={() => handleChangeType(filter)}>
+        <Link href='' className={s.department_card}>
 
             <div className={s.box}>
                 <div className={s.image_wrapper}>
@@ -34,6 +25,6 @@ export function DepartmentCard({ src, alt, name, filter } : CardProps){
 
             <p className={s.name}>{name}</p>
 
-        </div>
+        </Link>
     )
 }
