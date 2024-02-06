@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import s from './product-card.module.scss'
 import { formatPrice } from '@/utilities/format-price'
-import { useContext, useState } from 'react'
-import { ProductModal } from '../product-modal/product-modal'
+import { useContext } from 'react'
 import { Product } from '@/types/product'
 import { ModalContext } from '@/contexts/modal-context'
 

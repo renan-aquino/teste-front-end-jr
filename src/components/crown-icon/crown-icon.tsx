@@ -1,4 +1,3 @@
-// import v from '../../utilities/variables.module.scss'
 import s from './crown-icon.module.scss'
 
 interface IconProps {
