@@ -19,3 +19,13 @@
         width: 100%;
     }
 }
+
+.box_shadow_wrapper {
+    display: flex;
+    gap: 62px;
+    padding: 16px;
+
+    @media (max-width: 768px) {
+        gap: 26px;
+    }
+}

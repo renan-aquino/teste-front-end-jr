@@ -1,6 +1,7 @@
 "use client"
 
 import { FilterContextProvider } from "@/contexts/filter-context";
+import { ModalContextProvider } from "@/contexts/modal-context";
 import { ReactNode } from "react";
 
 interface DefaultProvidersProps {
@@ -8,11 +9,12 @@ interface DefaultProvidersProps {
 }
 
 
-
 export function DefaultProviders({ children } : DefaultProvidersProps){
     return(
         <FilterContextProvider>
-            {children}
+            <ModalContextProvider>
+                {children}
+            </ModalContextProvider>
         </FilterContextProvider>
     )
 }

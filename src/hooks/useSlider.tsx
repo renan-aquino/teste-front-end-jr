@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useState, useEffect } from 'react';
 
 export function useSlider(paddingSize: number) {
@@ -25,6 +27,7 @@ export function useSlider(paddingSize: number) {
                 setCanScrollLeft(scrollLeft > 0);
                 setCanScrollRight(scrollLeft + offsetWidth < scrollWidth);
             }
+
         };
 
         const handleResize = () => {
