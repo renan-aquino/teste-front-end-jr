@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import s from './hero.module.scss'
 
 export function Hero() {
@@ -7,7 +8,7 @@ export function Hero() {
                 <div className={s.headline}>
                     <h1>Venha conhecer nossas promoções</h1>
                     <h4 >50% Off nos produtos</h4>
-                    <button className={s.btn}><a href="#">Ver produto</a></button>
+                    <Link href='/'><button className={s.btn}>Ver produto</button></Link>
                 </div>    
             </div>
         </section>

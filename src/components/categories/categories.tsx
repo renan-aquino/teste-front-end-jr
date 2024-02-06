@@ -1,6 +1,7 @@
 import s from './categories.module.scss'
 import { useState } from "react";
-import { CrownIcon } from "../icons/crown-icon/crown-icon";
+import { CrownIcon } from "../crown-icon/crown-icon";
+import Link from 'next/link';
 
 export function Categories(){
 const [isFocused, setIsFocused] = useState(false);
@@ -17,16 +18,16 @@ const [isFocused, setIsFocused] = useState(false);
         
         <div className={s.categories}>
             <div className={s.categories_container}>
-                <a href='#' className={s.category}>TODAS CATEGORIAS</a>
-                <a href='#' className={s.category}>SUPERMERCADO</a>
-                <a href='#' className={s.category}>LIVROS</a>
-                <a href='#' className={s.category}>MODA</a>
-                <a href='#' className={s.category}>LANÇAMENTOS</a>
-                <a href='#' className={s.category}>OFERTAS DO DIA</a>
-                <a onFocus={handleFocus} onBlur={handleBlur} href='#' className={s.category}>
+                <Link href='/' className={s.category}>TODAS CATEGORIAS</Link>
+                <Link href='/' className={s.category}>SUPERMERCADO</Link>
+                <Link href='/' className={s.category}>LIVROS</Link>
+                <Link href='/' className={s.category}>MODA</Link>
+                <Link href='/' className={s.category}>LANÇAMENTOS</Link>
+                <Link href='/' className={s.category}>OFERTAS DO DIA</Link>
+                <Link onFocus={handleFocus} onBlur={handleBlur} href='#' className={s.category}>
                     <CrownIcon focus={isFocused}/>
                     ASSINATURA
-                </a>
+                </Link>
             </div>
         </div>
     )

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import s from './partner-card.module.scss'
 
 interface PartnerCardProps {
@@ -21,7 +22,7 @@ export function PartnerCard(props : PartnerCardProps){
             <div className={s.container}>
                 <h4 className={s.title}>{props.title}</h4>
                 <p className={s.text}>{props.text}</p>
-                <button className={s.btn}><a href="">CONFIRA</a></button>
+                <Link href='/'><button className={s.btn}>CONFIRA</button></Link>
             </div>
         </div>
     )
