@@ -5,14 +5,16 @@ import { Roof } from '../roof/roof'
 import { useEffect, useRef, useState } from 'react'
 import { Categories } from '../categories/categories'
 import Image from 'next/image'
-import vtex_logo from '@/../public/vectors/vtex_logo.svg'
-import { MagnifyingGlassIcon } from '../icons/magnifying-glass'
-import { ReturnsIcon } from '../icons/returns-icon'
-import { HeartIcon } from '../icons/heart-icon'
-import { CartIcon } from '../icons/cart-icon'
-import { UserCircleIcon } from '../icons/user-circle-icon'
-import { BurgerMenu } from '../icons/burger-menu-icon'
 import { MobileMenu } from '../mobile-menu/mobile-menu'
+import Link from 'next/link'
+import vtex_logo from '@/../public/vectors/vtex_logo.svg'
+import returnBox from '@/../public/vectors/return_box.svg'
+import heart from '@/../public/vectors/Heart.svg'
+import userCircle from '@/../public/vectors/UserCircle.svg'
+import shoppingCart from '@/../public/vectors/ShoppingCart.svg'
+import burgerMenu from '@/../public/vectors/burger-menu.svg'
+import { SearchBar } from '../search-bar/search-bar'
+
 
 
 export function Header() {
@@ -30,7 +32,7 @@ export function Header() {
 
         const html = document.querySelector("html");
         if (html) {
-            html.style.overflow = menu ? "hidden" : "auto";
+            html.style.overflowY = menu ? "hidden" : "auto";
         }
       
         document.addEventListener('click', closeMenuBox);
@@ -48,23 +50,20 @@ export function Header() {
             <nav className={s.navigation}>
                 <div className={s.container}>
 
-                    <a href=""><Image className={s.logo} src={vtex_logo} alt='vtex logo marca'></Image></a>
+                    <Link href="/"><Image className={s.logo} src={vtex_logo} alt='vtex logo marca'></Image></Link>
 
-                    <div className={s.search_container}>
-                        <input className={s.search_input} type="text" placeholder='O que você está buscando?'/>
-                        <MagnifyingGlassIcon/>
-                    </div>
+                    <SearchBar/>
 
                     <div className={s.user_buttons}>
-                        <a href="#"><ReturnsIcon/></a>
-                        <a href="#"><HeartIcon/></a>
-                        <a href="#"><UserCircleIcon/></a>
-                        <a href="#"><CartIcon/></a>
+                        <Link href='/'><Image src={returnBox} alt='devolução'></Image></Link>
+                        <Link href='/'><Image src={heart} alt='favoritos'></Image></Link>
+                        <Link href='/'><Image src={userCircle} alt='perfil'></Image></Link>
+                        <Link href='/'><Image src={shoppingCart} alt='carrinho de compras'></Image></Link>
                     </div>
 
                     <div className={s.menu}>
                         <div className={s.menu_icon_wrapper} ref={menuRef} onClick={() => setMenu(prev => !prev)}>
-                            <div className={s.menu_icon}><BurgerMenu/></div>
+                            <Image className={s.menu_icon} src={burgerMenu} alt='menu'></Image>
                         </div>
                         {menu && 
                         <>

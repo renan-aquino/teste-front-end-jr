@@ -1,27 +1,22 @@
-import { HeartIcon } from '../icons/heart-icon'
-import { CartIcon } from '../icons/cart-icon'
-import { ReturnsIcon } from '../icons/returns-icon'
-import { UserCircleIcon } from '../icons/user-circle-icon'
 import s from './mobile-menu.module.scss'
+import returnBox from '@/../public/vectors/return_box.svg'
+import heart from '@/../public/vectors/Heart.svg'
+import userCircle from '@/../public/vectors/UserCircle.svg'
+import shoppingCart from '@/../public/vectors/ShoppingCart.svg'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export function MobileMenu() {
     return (
         <div className={s.mobile_menu}>
             <div className={s.container}>
                 <div className={s.icons}>
-                    <a href="#">
-                        <UserCircleIcon/>
-                    </a>
-                    <a href="#">
-                        <CartIcon/>
-                    </a>
-                    <a href="#">
-                        <ReturnsIcon/>
-                    </a>
-                    <a href="#">
-                        <HeartIcon/>
-                    </a>
+                    <Link href='/'><Image src={returnBox} alt='devolução'></Image></Link>
+                    <Link href='/'><Image src={heart} alt='favoritos'></Image></Link>
+                    <Link href='/'><Image src={userCircle} alt='perfil'></Image></Link>
+                    <Link href='/'><Image src={shoppingCart} alt='carrinho de compras'></Image></Link>
                 </div>
+
                 <ul className={s.category_list}>
                     <li className={s.category_item}><a href='#'>TODAS CATEGORIAS</a></li>
                     <li className={s.category_item}><a href='#'>SUPERMERCADO</a></li>

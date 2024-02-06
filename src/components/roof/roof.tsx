@@ -1,22 +1,26 @@
 import s from './roof.module.scss'
-import { CreditCardIcon } from "../icons/credit-card-icon";
-import { ShieldCheckIcon } from "../icons/shield-check-icon";
-import { TruckIcon } from "../icons/truck-icon";
+import Image from 'next/image';
+import shield from '@/../public/vectors/ShieldCheck.svg'
+import truck from '@/../public/vectors/Truck.svg'
+import card from '@/../public/vectors/CreditCard.svg'
 
 export function Roof(){
     return (
         <div className={s.roof}>
             <ul className={s.container}>
+
                 <li className={s.list_item}>
-                    <ShieldCheckIcon/>
+                    <Image src={shield} alt='segurança'></Image>
                     <p>Compra <span>100% segura</span></p>
                 </li>
+
                 <li className={s.list_item}>
-                    <TruckIcon/>
+                    <Image src={truck} alt='frete grátis'></Image>
                     <p><span>Frete grátis</span> acima de R$ 200</p>
                 </li>
+
                 <li className={s.list_item}>
-                    <CreditCardIcon/>
+                    <Image src={card} alt='parcelamento'></Image>
                     <p><span>Parcele</span> suas compras</p>
                 </li>
             </ul>
