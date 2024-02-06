@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import s from './brand-card.module.scss'
 import Image, { StaticImageData } from "next/image";
 
@@ -8,8 +9,8 @@ interface BrandCardProps {
 
 export function BrandCard({ image, alt } : BrandCardProps){
     return (
-        <div className={s.brand_card}>
+        <Link href='/' className={s.brand_card}>
             <Image className={s.image} src={image} alt={alt}></Image>
-        </div>
+        </Link>
     )
 }
