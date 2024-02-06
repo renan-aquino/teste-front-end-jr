@@ -14,6 +14,7 @@ import userCircle from '@/../public/vectors/UserCircle.svg'
 import shoppingCart from '@/../public/vectors/ShoppingCart.svg'
 import burgerMenu from '@/../public/vectors/burger-menu.svg'
 import { SearchBar } from '../search-bar/search-bar'
+import { DarkOverlay } from '../dark-overlay/dark-overlay'
 
 
 
@@ -65,13 +66,11 @@ export function Header() {
                         <div className={s.menu_icon_wrapper} ref={menuRef} onClick={() => setMenu(prev => !prev)}>
                             <Image className={s.menu_icon} src={burgerMenu} alt='menu'></Image>
                         </div>
-                        {menu && 
-                        <>
-                            <div className={s.menu_box} ref={menuBoxRef}>
-                                <MobileMenu/>
-                            </div>
-                            <div className={s.overlay}/>
-                        </>}
+                        
+                        {menu && (<>
+                            <div ref={menuBoxRef}><MobileMenu/></div>
+                            <DarkOverlay/>
+                        </>)}
                     </div>
                         
                 </div>
