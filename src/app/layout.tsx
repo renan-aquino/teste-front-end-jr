@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.scss";
 import { Header } from "@/components/header/header";
 import { DefaultProviders } from "@/components/default-providers";
+import { Footer } from "@/components/footer/footer";
 
 const poppins = Poppins({ weight: ['300', '400', '500', '600', '700', '900'], subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <DefaultProviders>
           <Header/>
           {children}
+          <Footer/>
         </DefaultProviders>
       </body>
     </html>
