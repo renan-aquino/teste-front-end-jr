@@ -15,9 +15,9 @@ export function Counter(){
 
     return (
         <div className={s.counter}>
-            <Image onClick={() => amount > 1 && setAmount(amount - 1)} src={minusSign} alt={'subtrair'}></Image>
+            <button className={s.btn}><Image onClick={() => amount > 1 && setAmount(amount - 1)} src={minusSign} alt={'subtrair'}></Image></button>
             <div className={s.item}>{amount}</div>
-            <Image onClick={() => setAmount(amount + 1)} src={plusSign} alt={'adicionar'}></Image>
+            <button className={s.btn}><Image onClick={() => setAmount(amount + 1)} src={plusSign} alt={'adicionar'}></Image></button>
         </div>
     )
 }
