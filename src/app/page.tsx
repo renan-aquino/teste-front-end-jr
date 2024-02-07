@@ -11,7 +11,7 @@ export default async function Home() {
 
   async function getData() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`);
+      const res = await fetch(`https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json`);
   
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
